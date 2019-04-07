@@ -5,7 +5,6 @@ class Matrix
 
   def rows
     separated_by_lines = @matrix.lines
-    # ["1 2", "10 20"].map do |line|
 
     rows_after_map = separated_by_lines.map do |line|
       line.split.map(&:to_i)
