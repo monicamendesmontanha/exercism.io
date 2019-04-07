@@ -1,7 +1,9 @@
 class Acronym
   def self.abbreviate(words)
     abbreviation = ''
-    words_separated_by_space = words.split(" ")
+
+    words_without_dashes = words.gsub('-', ' ')
+    words_separated_by_space = words_without_dashes.split(' ')
 
     words_separated_by_space.each do |word|
       all_characters = word.chars
